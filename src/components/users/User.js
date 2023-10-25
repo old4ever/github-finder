@@ -4,7 +4,7 @@ import Repos from "../repos/Repos";
 import PropTypes from "prop-types";
 import { useParams, Link } from "react-router-dom";
 
-function User({
+const User = ({
   getUser,
   getUserRepos,
   loading,
@@ -23,7 +23,7 @@ function User({
     public_repos,
     hireable,
   },
-}) {
+}) => {
   const { login } = useParams();
 
   useEffect(() => {
@@ -97,7 +97,7 @@ function User({
       <Repos repos={repos} />
     </Fragment>
   );
-}
+};
 
 User.propTypes = {
   loading: PropTypes.bool,
