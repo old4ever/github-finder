@@ -80,7 +80,13 @@ const User = ({
               <li>
                 {blog && (
                   <Fragment>
-                    <strong>Website: </strong> {blog}
+                    <strong>Website: </strong>{" "}
+                    <a
+                      href={blog.includes("http") ? blog : `https://${blog}`}
+                      target="_blank"
+                    >
+                      {blog}
+                    </a>
                   </Fragment>
                 )}
               </li>
